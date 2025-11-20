@@ -1,0 +1,305 @@
+{
+  "title": "Bubble Sort (10 steps)",
+  "steps": [
+    {
+      "orderIndex": 0,
+      "label": "Pass 0, compare (0,1)",
+      "explanation": "Comparing 5 and 1 → swap",
+      "input": {
+        "arrBefore": [
+          5,
+          1,
+          4,
+          2,
+          8
+        ],
+        "pass": 0,
+        "j": 0,
+        "compare": {
+          "leftIndex": 0,
+          "rightIndex": 1
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          5,
+          4,
+          2,
+          8
+        ],
+        "swapped": true
+      }
+    },
+    {
+      "orderIndex": 1,
+      "label": "Pass 0, compare (1,2)",
+      "explanation": "Comparing 5 and 4 → swap",
+      "input": {
+        "arrBefore": [
+          1,
+          5,
+          4,
+          2,
+          8
+        ],
+        "pass": 0,
+        "j": 1,
+        "compare": {
+          "leftIndex": 1,
+          "rightIndex": 2
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          4,
+          5,
+          2,
+          8
+        ],
+        "swapped": true
+      }
+    },
+    {
+      "orderIndex": 2,
+      "label": "Pass 0, compare (2,3)",
+      "explanation": "Comparing 5 and 2 → swap",
+      "input": {
+        "arrBefore": [
+          1,
+          4,
+          5,
+          2,
+          8
+        ],
+        "pass": 0,
+        "j": 2,
+        "compare": {
+          "leftIndex": 2,
+          "rightIndex": 3
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "swapped": true
+      }
+    },
+    {
+      "orderIndex": 3,
+      "label": "Pass 0, compare (3,4)",
+      "explanation": "Comparing 5 and 8 → no swap",
+      "input": {
+        "arrBefore": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "pass": 0,
+        "j": 3,
+        "compare": {
+          "leftIndex": 3,
+          "rightIndex": 4
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    },
+    {
+      "orderIndex": 4,
+      "label": "Pass 1, compare (0,1)",
+      "explanation": "Comparing 1 and 4 → no swap",
+      "input": {
+        "arrBefore": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "pass": 1,
+        "j": 0,
+        "compare": {
+          "leftIndex": 0,
+          "rightIndex": 1
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    },
+    {
+      "orderIndex": 5,
+      "label": "Pass 1, compare (1,2)",
+      "explanation": "Comparing 4 and 2 → swap",
+      "input": {
+        "arrBefore": [
+          1,
+          4,
+          2,
+          5,
+          8
+        ],
+        "pass": 1,
+        "j": 1,
+        "compare": {
+          "leftIndex": 1,
+          "rightIndex": 2
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "swapped": true
+      }
+    },
+    {
+      "orderIndex": 6,
+      "label": "Pass 1, compare (2,3)",
+      "explanation": "Comparing 4 and 5 → no swap",
+      "input": {
+        "arrBefore": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "pass": 1,
+        "j": 2,
+        "compare": {
+          "leftIndex": 2,
+          "rightIndex": 3
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    },
+    {
+      "orderIndex": 7,
+      "label": "Pass 2, compare (0,1)",
+      "explanation": "Comparing 1 and 2 → no swap",
+      "input": {
+        "arrBefore": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "pass": 2,
+        "j": 0,
+        "compare": {
+          "leftIndex": 0,
+          "rightIndex": 1
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    },
+    {
+      "orderIndex": 8,
+      "label": "Pass 2, compare (1,2)",
+      "explanation": "Comparing 2 and 4 → no swap",
+      "input": {
+        "arrBefore": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "pass": 2,
+        "j": 1,
+        "compare": {
+          "leftIndex": 1,
+          "rightIndex": 2
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    },
+    {
+      "orderIndex": 9,
+      "label": "Pass 3, compare (0,1)",
+      "explanation": "Comparing 1 and 2 → no swap (sorted)",
+      "input": {
+        "arrBefore": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "pass": 3,
+        "j": 0,
+        "compare": {
+          "leftIndex": 0,
+          "rightIndex": 1
+        }
+      },
+      "output": {
+        "arrAfter": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "swapped": false
+      }
+    }
+  ]
+}
