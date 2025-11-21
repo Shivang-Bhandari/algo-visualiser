@@ -6,7 +6,7 @@ type Props = {
 	onLoad: (data: AlgorithmRun) => void;
 };
 
-export default function UrlLoader({ onLoad }: Props): JSX.Element {
+export default function UrlLoader({ onLoad }: Props): React.JSX.Element {
 	const [url, setUrl] = React.useState<string>('');
 	const [error, setError] = React.useState<string | null>(null);
 	const [loading, setLoading] = React.useState<boolean>(false);
@@ -20,7 +20,7 @@ export default function UrlLoader({ onLoad }: Props): JSX.Element {
 			const data = await res.json();
 			const parsed = AlgorithmRunSchema.safeParse(data);
 			if (!parsed.success) {
-				setError(parsed.error.errors.map((e) => `${e.path.join('.')}: ${e.message}`).join('\n'));
+				setError(parsed.error.issues.map((e) => `${e.path.join('.')}: ${e.message}`).join('\n'));
 				return;
 			}
 			onLoad(parsed.data);

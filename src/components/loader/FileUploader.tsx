@@ -6,7 +6,7 @@ type Props = {
 	onLoad: (data: AlgorithmRun) => void;
 };
 
-export default function FileUploader({ onLoad }: Props): JSX.Element {
+export default function FileUploader({ onLoad }: Props): React.JSX.Element {
 	const [error, setError] = React.useState<string | null>(null);
 
 	const onFile = React.useCallback(
@@ -17,7 +17,7 @@ export default function FileUploader({ onLoad }: Props): JSX.Element {
 				const json = JSON.parse(text);
 				const res = AlgorithmRunSchema.safeParse(json);
 				if (!res.success) {
-					setError(res.error.errors.map((e) => `${e.path.join('.')}: ${e.message}`).join('\n'));
+					setError(res.error.issues.map((e) => `${e.path.join('.')}: ${e.message}`).join('\n'));
 					return;
 				}
 				onLoad(res.data);

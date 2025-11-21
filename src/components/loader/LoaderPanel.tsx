@@ -9,7 +9,7 @@ type Props = {
 	onLoaded: (data: AlgorithmRun) => void;
 };
 
-export default function LoaderPanel({ onLoaded }: Props): JSX.Element {
+export default function LoaderPanel({ onLoaded }: Props): React.JSX.Element {
 	const [tab, setTab] = React.useState(0);
 	const [warnings, setWarnings] = React.useState<string[]>([]);
 
